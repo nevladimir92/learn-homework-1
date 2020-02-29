@@ -14,7 +14,14 @@ def ask_user():
     """
     Замените pass на ваш код
     """
-    pass
-    
+    QA = {"Как дела?":"Хорошо","Что делаешь?":"Програмирую", "Как погода?":"Гавно","Где работаешь?":"В кето","Будешь пиво?":"Да"}
+    while True:
+        try:
+            user_say = input("Введите вопрос..") 
+            print(QA.get(user_say,"Давай другой вопрос"))
+            
+        except KeyboardInterrupt:
+           print("Пока!")
+           break
 if __name__ == "__main__":
     ask_user()
